@@ -1,0 +1,39 @@
+# ai-motion-graphics-generator — default pipeline config
+app:
+  name: ai-motion-graphics-generator
+  version: 0.6.2
+  workdir: ./.amg
+
+pipeline:
+  max_workers: 4
+  queue_capacity: 64
+  retry_attempts: 3
+  retry_backoff_sec: 1.5
+  fail_fast: false
+
+render:
+  default_preset: 1080p60
+  presets:
+    720p30:  { width: 1280, height: 720,  fps: 30, codec: h264 }
+    1080p60: { width: 1920, height: 1080, fps: 60, codec: h264 }
+    4k30:    { width: 3840, height: 2160, fps: 30, codec: hevc }
+    prores:  { width: 1920, height: 1080, fps: 30, codec: prores422 }
+  color: bt709
+  audio_sample_rate: 48000
+
+models:
+  router: local
+  scene_planner: weights/scene_planner_v3.onnx
+  keyframe_diffuser: weights/keyframe_diffuser_v2.safetensors
+  weight_lock: config/models.lock.json
+
+drivers:
+  enabled: [ffmpeg, webm, gif]
+  ffmpeg_path: ffmpeg
+  blender_path: null
+  afterfx_path: null
+
+logging:
+  level: INFO
+  json: false
+  file: ./.amg/logs/amg.log
