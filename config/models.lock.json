@@ -1,0 +1,5 @@
+{
+  "scene_planner_v3.onnx": "9f2c1b7a4e8d3c5f6a0b1e2d3c4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f",
+  "keyframe_diffuser_v2.safetensors": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
+  "tween_flow_v1.onnx": "deadbeefcafebabe0123456789abcdef0123456789abcdef0123456789abcdef"
+}
