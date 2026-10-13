@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# AI motion graphics generator — runtime artifacts
+renders/
+cache/
+*.mogrt.tmp
+*.mp4
+*.webm
+*.gif
+*.prores
+*.exr
+*.png
+*.jpg
+*.wav
+*.aac
+
+# Model weights (downloaded on first run)
+models/weights/
+*.safetensors
+*.onnx
+*.ckpt
+*.pt
+*.bin
+
+# Local config overrides
+config/local.yaml
+config/secrets.yaml
+.env
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
